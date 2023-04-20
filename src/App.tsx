@@ -360,6 +360,7 @@ function App() {
         return currentQuote
 
     }
+    const tweetData ='https://twitter.com/intent/tweet?text='+ currentQuote.q +' '+currentQuote.a;
     return (
         <div className="App">
             <div id='quote-box'>
@@ -370,7 +371,7 @@ function App() {
                     {currentQuote.a}
                 </div>
                 <button id='new-quote' onClick={handleNewQuote}>New Quote</button>
-                <a id='tweet-quote' href="https://twitter.com/intent/tweet">Tweet Quote</a>
+                <a id='tweet-quote' href={tweetData}>Tweet Quote</a>
             </div>
         </div>
     )
